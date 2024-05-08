@@ -1,16 +1,21 @@
+import { GlobalStyle } from './GlobalStyle';
+
 export const App = (): JSX.Element => {
   return (
-    <div>
-      <div>Sidebar</div>
+    <>
+      <GlobalStyle />
       <div>
-        <div>Header</div>
+        <div>Sidebar</div>
         <div>
-          Main Content
-          <br />
-          App
+          <div>Header</div>
+          <div>
+            Main Content
+            <br />
+            App
+          </div>
+          <div>Footer</div>
         </div>
-        <div>Footer</div>
       </div>
-    </div>
+    </>
   );
 };
