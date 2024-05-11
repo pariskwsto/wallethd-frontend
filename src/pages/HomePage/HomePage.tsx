@@ -1,3 +1,5 @@
+import { HomepageWrapper } from './style';
+
 export const HomePage = (): JSX.Element => {
-  return <div>HomePage</div>;
+  return <HomepageWrapper>HomePage</HomepageWrapper>;
 };

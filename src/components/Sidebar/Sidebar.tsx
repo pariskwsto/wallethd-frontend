@@ -1,5 +1,15 @@
-import { SidebarWrapper } from './style';
+import { Logo } from '../Logo/Logo';
+import { SidebarNav } from '../SidebarNav';
+
+import { SidebarContainer, SidebarWrapper } from './style';
 
 export const Sidebar = (): JSX.Element => {
-  return <SidebarWrapper>Sidebar</SidebarWrapper>;
+  return (
+    <SidebarWrapper>
+      <SidebarContainer>
+        <Logo />
+        <SidebarNav />
+      </SidebarContainer>
+    </SidebarWrapper>
+  );
 };

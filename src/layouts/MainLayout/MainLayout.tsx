@@ -2,27 +2,15 @@ import { Outlet } from 'react-router-dom';
 
 import { Header, Sidebar } from '../../components';
 
-import {
-  MainLayoutContent,
-  MainLayoutHeader,
-  MainLayoutOutlet,
-  MainLayoutSidebar,
-  MainLayoutWrapper,
-} from './style';
+import { MainLayoutContent, MainLayoutWrapper } from './style';
 
 export const MainLayout = (): JSX.Element => {
   return (
     <MainLayoutWrapper>
-      <MainLayoutSidebar>
-        <Sidebar />
-      </MainLayoutSidebar>
+      <Sidebar />
       <MainLayoutContent>
-        <MainLayoutHeader>
-          <Header />
-        </MainLayoutHeader>
-        <MainLayoutOutlet>
-          <Outlet />
-        </MainLayoutOutlet>
+        <Header />
+        <Outlet />
       </MainLayoutContent>
     </MainLayoutWrapper>
   );
