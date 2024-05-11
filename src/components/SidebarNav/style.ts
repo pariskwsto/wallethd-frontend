@@ -38,11 +38,11 @@ export const SideNavLink = styled(NavLink)`
   text-decoration: none;
 
   &:hover {
-    color: var(--text-petrol-color);
+    color: var(--text-main-color);
   }
 
   &.active {
-    color: var(--text-petrol-color);
+    color: var(--text-main-color);
     background-color: var(--sidebar-selected-navlink);
     box-shadow: 0px 2px 9px 2px var(--bg-color);
   }
