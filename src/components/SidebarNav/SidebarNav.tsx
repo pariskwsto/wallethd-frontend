@@ -1,18 +1,32 @@
-import { NavLink } from 'react-router-dom';
+import { MdDashboard, MdList } from 'react-icons/md';
 
-import { SideNavList, SideNavWrapper } from './style';
+import {
+  SideNavLink,
+  SideNavList,
+  SideNavListContainer,
+  SideNavListItem,
+  SideNavListTitle,
+  SideNavWrapper,
+} from './style';
 
 export const SidebarNav = (): JSX.Element => {
   return (
     <SideNavWrapper>
-      <SideNavList>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/transactions">Transactions</NavLink>
-        </li>
-      </SideNavList>
+      <SideNavListContainer>
+        <SideNavListTitle>GENERAL</SideNavListTitle>
+        <SideNavList>
+          <SideNavListItem>
+            <SideNavLink to="/">
+              <MdDashboard size={20} /> <span>Home</span>
+            </SideNavLink>
+          </SideNavListItem>
+          <SideNavListItem>
+            <SideNavLink to="/transactions">
+              <MdList size={20} /> <span>Transactions</span>
+            </SideNavLink>
+          </SideNavListItem>
+        </SideNavList>
+      </SideNavListContainer>
     </SideNavWrapper>
   );
 };
