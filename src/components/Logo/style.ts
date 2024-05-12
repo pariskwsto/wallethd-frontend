@@ -12,7 +12,7 @@ export const LogoLink = styled(Link)`
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-  color: var(--text-main-color);
+  color: var(--text-brand-color);
   text-decoration: none;
 `;
 

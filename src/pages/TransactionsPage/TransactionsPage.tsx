@@ -1,3 +1,11 @@
+import { Table } from '../../components';
+
+import { TransactionsPageWrapper } from './style';
+
 export const TransactionsPage = (): JSX.Element => {
-  return <div>TransactionsPage</div>;
+  return (
+    <TransactionsPageWrapper>
+      <Table />
+    </TransactionsPageWrapper>
+  );
 };

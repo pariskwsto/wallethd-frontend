@@ -12,10 +12,6 @@ export const SideNavListContainer = styled.div`
 
 export const SideNavListTitle = styled.h4`
   padding: 0 1rem 0.875rem;
-  color: var(--text-h4-color);
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1rem;
 `;
 
 export const SideNavList = styled.ul`
@@ -29,21 +25,21 @@ export const SideNavListItem = styled.li``;
 export const SideNavLink = styled(NavLink)`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.875rem;
   height: 3rem;
   padding: 0.875rem 1rem;
   color: var(--text-color);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-lg);
   font-size: 0.875rem;
   text-decoration: none;
 
   &:hover {
-    color: var(--text-main-color);
+    color: var(--text-brand-color);
   }
 
   &.active {
-    color: var(--text-main-color);
+    color: var(--text-brand-color);
     background-color: var(--sidebar-selected-navlink);
-    box-shadow: 0px 2px 9px 2px var(--bg-color);
+    box-shadow: var(--shadow-md);
   }
 `;

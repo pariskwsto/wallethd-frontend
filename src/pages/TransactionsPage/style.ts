@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const HomepageWrapper = styled.div`
+export const TransactionsPageWrapper = styled.div`
   padding: 2rem;
 `;
