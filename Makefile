@@ -4,6 +4,9 @@ install:
 start:
 	yarn dev
 
+storybook:
+	yarn storybook
+
 lint:
 	yarn lint
 

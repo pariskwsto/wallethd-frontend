@@ -29,3 +29,6 @@ dist-ssr
 
 # testing
 /coverage
+
+# storybook
+*storybook.log
