@@ -1,12 +1,14 @@
-import { ButtonSize, ButtonVariation } from './interfaces';
+import { ReactNode } from 'react';
+
+import { ButtonSize, ButtonType, ButtonVariation } from './interfaces';
 import { ButtonWrapper } from './style';
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   disabled?: boolean;
   onClick?: () => void;
   size?: ButtonSize;
-  type?: 'button' | 'reset' | 'submit';
+  type?: ButtonType;
   variation?: ButtonVariation;
 }
 
@@ -15,7 +17,7 @@ export const Button = ({
   disabled,
   onClick,
   size,
-  type = 'button',
+  type = ButtonType.Button,
   variation,
 }: ButtonProps): JSX.Element => {
   return (

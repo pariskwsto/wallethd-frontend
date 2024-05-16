@@ -22,7 +22,7 @@ const buttonVariations = {
     color: var(--text-color);
     background-color: var(--color-grey-0);
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: var(--color-grey-100);
     }
   `,
@@ -41,4 +41,12 @@ export const ButtonWrapper = styled.button<{
 
   ${({ $size = ButtonSize.Medium }) => buttonSizes[$size]}
   ${({ $variation = ButtonVariation.Default }) => buttonVariations[$variation]}
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      opacity: 0.8;
+      color: var(--color-grey-400);
+      cursor: not-allowed;
+    `}
 `;

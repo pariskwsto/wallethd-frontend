@@ -4,6 +4,12 @@ export enum ButtonSize {
   Small = 'small',
 }
 
+export enum ButtonType {
+  Button = 'button',
+  Reset = 'reset',
+  Submit = 'submit',
+}
+
 export enum ButtonVariation {
   Default = 'default',
 }

@@ -94,8 +94,8 @@ export const GlobalStyle = createGlobalStyle`
 
   h4 {
     color: var(--text-h4-color);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1rem;
+    line-height: 1;
   }
 `;
