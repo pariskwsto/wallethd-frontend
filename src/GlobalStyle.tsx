@@ -32,6 +32,10 @@ export const GlobalStyle = createGlobalStyle`
       --color-red-100: #fee2e2;
       --color-red-700: #b91c1c;
       --color-red-800: #991b1b;
+ 
+      /* yellow */
+      --color-yellow-100: #fffbea;
+      --color-yellow-700: #b1550e;
       
       /* shadows */
       --shadow-sm: 0 1px 2px rgba(9, 49, 69, 0.04);
@@ -83,7 +87,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     color: var(--text-color);
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
     font-family: "Helvetica", sans-serif;
   }
 

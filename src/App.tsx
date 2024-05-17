@@ -1,17 +1,10 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-
-import { GlobalStyle } from './GlobalStyle';
+import { AppProvider } from './AppProvider';
 import { AppRouter } from './router';
-
-const queryClient = new QueryClient();
 
 export const App = (): JSX.Element => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <GlobalStyle />
+    <AppProvider>
       <AppRouter />
-      <ReactQueryDevtools initialIsOpen={false} position="right" />
-    </QueryClientProvider>
+    </AppProvider>
   );
 };

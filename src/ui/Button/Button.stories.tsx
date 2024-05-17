@@ -1,12 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import {
-  Button,
-  ButtonSize,
-  ButtonType,
-  ButtonVariation,
-} from '../../ui/Button';
+import { Button } from './Button';
+import { ButtonSize, ButtonType, ButtonVariation } from './interfaces';
 
 const meta = {
   title: 'UI/Button',

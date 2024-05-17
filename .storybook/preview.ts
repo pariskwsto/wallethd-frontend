@@ -1,6 +1,6 @@
 import { Preview } from '@storybook/react';
 
-import { withGlobalStyle } from '../src/stories/decorators';
+import { withAppProvider } from '../src/stories/decorators';
 
 const preview: Preview = {
   parameters: {
@@ -11,7 +11,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [withGlobalStyle],
+  decorators: [withAppProvider],
 };
 
 export default preview;
