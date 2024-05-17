@@ -87,7 +87,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     color: var(--text-color);
-    /* background-color: var(--bg-color); */
+    background-color: var(--bg-color);
     font-family: "Helvetica", sans-serif;
   }
 

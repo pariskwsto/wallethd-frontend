@@ -1,7 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { MainLayout } from '../../layouts';
-import { HomePage, NotFoundPage, TransactionsPage } from '../../pages';
+import {
+  HomePage,
+  LoginPage,
+  NotFoundPage,
+  TransactionsPage,
+} from '../../pages';
 
 export const AppRouter = (): JSX.Element => {
   return (
@@ -12,6 +17,7 @@ export const AppRouter = (): JSX.Element => {
           <Route path="transactions" element={<TransactionsPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
