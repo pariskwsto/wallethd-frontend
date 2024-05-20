@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const LoginPageWrapper = styled.div`
   display: flex;
   height: 100vh;
+  background-color: var(--color-brand-900);
 `;
 
 export const LoginPageBgImageContainer = styled.div`

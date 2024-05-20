@@ -1,3 +1,4 @@
+import { LoginForm } from '../../features';
 import { LoginLayout } from '../../layouts';
 
 import {
@@ -14,7 +15,9 @@ export const LoginPage = (): JSX.Element => {
         <LoginPageBgImageContainer>
           <LoginPageBgImage />
         </LoginPageBgImageContainer>
-        <LoginPageContainer>LoginForm</LoginPageContainer>
+        <LoginPageContainer>
+          <LoginForm />
+        </LoginPageContainer>
       </LoginPageWrapper>
     </LoginLayout>
   );
