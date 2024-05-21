@@ -30,6 +30,10 @@ export const LoginFormInput = styled.input`
   padding: 0.75rem;
   border: 1px solid var(--color-grey-300);
   border-radius: 8px;
+
+  &:disabled {
+    background-color: var(--color-grey-200);
+  }
 `;
 
 export const LoginFormButton = styled.button`
@@ -50,6 +54,12 @@ export const LoginFormButton = styled.button`
   &:active {
     transform: translateY(2px);
     box-shadow: none;
+  }
+
+  &:disabled {
+    color: var(--color-grey-500);
+    background-color: var(--color-grey-300);
+    cursor: not-allowed;
   }
 `;
 

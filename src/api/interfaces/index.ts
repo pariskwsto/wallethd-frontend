@@ -1,2 +1,3 @@
-export * from './api-response.interface';
-export * from './transactions.inteface';
+export * from './api-generic-response.intefaces';
+export * from './auth.intefaces';
+export * from './transactions.intefaces';

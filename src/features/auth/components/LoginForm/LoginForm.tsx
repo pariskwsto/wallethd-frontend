@@ -2,6 +2,9 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
+import { SpinnerMini } from '../../../../ui';
+import { useLogin } from '../../queries';
+
 import {
   ErrorMessage,
   LoginFormButton,
@@ -29,13 +32,28 @@ export const LoginForm = (): JSX.Element => {
     formState: { errors },
     handleSubmit,
     register,
+    reset,
   } = useForm<ValidationSchemaType>({
     resolver: zodResolver(schema),
   });
 
+  const { isPendingLogin, login } = useLogin();
+
   const onSubmit: SubmitHandler<ValidationSchemaType> = (data) => {
-    // eslint-disable-next-line no-console
-    console.log(data); // REVIEW
+    const { email, password } = data;
+
+    if (!email || !password) {
+      return;
+    }
+
+    login(
+      { email, password },
+      {
+        onSettled: () => {
+          reset();
+        },
+      },
+    );
   };
 
   const hasError = Object.keys(errors).length > 0;
@@ -45,7 +63,12 @@ export const LoginForm = (): JSX.Element => {
       <LoginFormTitle>Sign In</LoginFormTitle>
       <LoginFormElement onSubmit={handleSubmit(onSubmit)}>
         <LoginFormLabel htmlFor="email">Username</LoginFormLabel>
-        <LoginFormInput id="email" type="email" {...register('email')} />
+        <LoginFormInput
+          id="email"
+          type="email"
+          {...register('email')}
+          disabled={isPendingLogin}
+        />
 
         <LoginFormLabel htmlFor="password">Password</LoginFormLabel>
         <LoginFormInput
@@ -53,6 +76,7 @@ export const LoginForm = (): JSX.Element => {
           type="password"
           autoComplete="current-password"
           {...register('password')}
+          disabled={isPendingLogin}
         />
 
         {hasError && (
@@ -62,7 +86,9 @@ export const LoginForm = (): JSX.Element => {
             })}
           </ErrorMessage>
         )}
-        <LoginFormButton type="submit">Login</LoginFormButton>
+        <LoginFormButton type="submit" disabled={isPendingLogin}>
+          {!isPendingLogin ? 'Login' : <SpinnerMini />}
+        </LoginFormButton>
       </LoginFormElement>
     </LoginFormWrapper>
   );
