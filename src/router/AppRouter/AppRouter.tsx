@@ -7,17 +7,24 @@ import {
   NotFoundPage,
   TransactionsPage,
 } from '../../pages';
+import { ProtectedRoute } from '../ProtectedRoute';
 
 export const AppRouter = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<MainLayout />}>
+        <Route
+          element={
+            <ProtectedRoute>
+              <MainLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<HomePage />} />
           <Route path="transactions" element={<TransactionsPage />} />
         </Route>
-        <Route path="*" element={<NotFoundPage />} />
         <Route path="login" element={<LoginPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
